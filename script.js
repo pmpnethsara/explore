@@ -1,3 +1,55 @@
+  
+  document.getElementById("make-plan").addEventListener("click", () => {
+    if (!trip.length) {
+      notify("Add at least one place, stay or restaurant first.");
+      return;
+    }
+    const dateValue = document.getElementById("start-date").value;
+    const days = Number(document.getElementById("days").value);
+    const start = dateValue ? new Date(`${dateValue}T12:00:00`) : null;
+    const dateLabel = start ? start.toLocaleDateString(undefined, {year:"numeric", month:"long", day:"numeric"}) : "Date not set";
+    const stays = trip.filter(item => item.type === "Hotel");
+    const food = trip.filter(item => item.type === "Restaurant");
+    const places = trip.filter(item => item.type !== "Hotel" && item.type !== "Restaurant");
+    const lines = [
+      "EXPLORE GALLE — MY TRIP PLAN",
+      `Arrival: ${dateLabel}`,
+      `Length: ${days} day${days > 1 ? "s" : ""}`,
+      "",
+      "SUGGESTED OUTLINE",
+      ...Array.from({length: days}, (_, i) => {
+        const dayPlaces = places.filter((_, idx) => idx % days === i);
+        const dayFood = food.filter((_, idx) => idx % days === i);
+        let line = `Day ${i + 1}: `;
+        line += dayPlaces.length ? dayPlaces.map(x => x.name).join(" → ") : "Explore Galle at your own pace";
+        if (dayFood.length) line += ` | Food: ${dayFood.map(x => x.name).join(", ")}`;
+        return line;
+      }),
+      "",
+      "STAY",
+      stays.length ? stays.map(x => "• " + x.name).join("\n") : "Choose and book accommodation separately.",
+      "",
+      "SELECTED ITEMS",
+      ...trip.map(x => `• ${x.type}: ${x.name}`),
+      "",
+      "Remember to confirm opening hours, routes, weather, prices and bookings directly."
+    ];
+    currentPlan = lines.join("\n");
+    output.textContent = currentPlan;
+    output.classList.add("show");
+    copyButton.hidden = downloadButton.hidden = false;
+
+    // 🚀 Send the generated itinerary to your email via EmailJS
+    emailjs.send("service_ymfzk6x", "template_avjtnld", {
+      itinerary_content: currentPlan,
+      submission_date: new Date().toLocaleString()
+    })
+    .then(() => {
+      console.log("Itinerary sent to email successfully!");
+    }, (error) => {
+      console.error("Email sending failed:", error);
+    });
+  });
   // Filter buttons for destination, hotel and restaurant categories
   document.querySelectorAll("[data-filter-group]").forEach(group => {
     group.querySelectorAll(".filter-btn").forEach(button => {
