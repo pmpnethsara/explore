@@ -27,7 +27,7 @@
       <div>
         <span class="eyebrow">Sri Lanka · Southern coast</span>
         <h1>Find your kind<br>of <em>Galle escape.</em></h1>
-        <p class="hero-copy">Wander old fort streets, discover palm-fringed beaches, find a stay you’ll love, and taste your way around the south coast.</p>
+        <p class="hero-copy">Wander old fort streets, find a stay you’ll love, and taste your way around the south coast.</p>
         <div class="hero-actions"><a class="btn" href="#destinations">Explore places <span>↗</span></a><a class="btn secondary" href="#planner">Build my Trip</a></div>
         <div class="hero-note"><span> Historic streets & ocean views</span><span><span> Made for slow travel</span></div>
       </div>
@@ -38,70 +38,406 @@
     </div>
   </section>
 
+  <!-- Destinations Section -->
   <section class="section" id="destinations">
     <div class="wrap">
-      <div class="section-head"><div><span class="eyebrow">Make memories</span><h2>Places worth the detour</h2></div><p>From heritage walks to quiet coves, choose the experiences that feel like your kind of trip.</p></div>
-      <div class="filters" data-filter-group="destination">
-        <button class="filter-btn active" data-filter="all">All places</button><button class="filter-btn" data-filter="heritage">Heritage</button><button class="filter-btn" data-filter="beach">Beaches</button><button class="filter-btn" data-filter="nature">Nature & views</button>
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Make memories</span>
+          <h2>Places worth the detour</h2>
+        </div>
+        <p>From heritage walks to quiet coves and rainforest trails, choose the experiences that feel like your kind of trip.</p>
       </div>
-      <div class="cards" id="destination-cards">
-        <article class="card" data-category="heritage">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1590123732197-e7079d2ceb89?auto=format&fit=crop&w=900&q=80" alt="Historic fort architecture"><span class="pill">Heritage</span><button class="heart" aria-label="Save Galle Fort" data-save="Galle Fort">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>Galle town</span><span class="rating">★ 4.4</span></div><h3>Galle Fort</h3><p>Explore historic ramparts, lighthouse views, small galleries and charming lanes inside this UNESCO-listed old town.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Galle Fort" data-type="Destination" data-icon="🏛️">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Sri+Lanka">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="beach">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Tropical ocean and beach"><span class="pill">Beach</span><button class="heart" aria-label="Save Unawatuna Beach" data-save="Unawatuna Beach">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>About 15–20 min from central Galle*</span><span class="rating">★ 3.9</span></div><h3>Unawatuna Beach</h3><p>A lively crescent-shaped bay for a swim, beachside cafés and a relaxed afternoon by the water.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Unawatuna Beach" data-type="Destination" data-icon="🏖️">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Unawatuna+Beach">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="nature">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=80" alt="Blue ocean and waves"><span class="pill">Nature & views</span><button class="heart" aria-label="Save Jungle Beach" data-save="Jungle Beach">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>Rumassala, near Unawatuna</span><span class="rating">★ 3.7</span></div><h3>Jungle Beach</h3><p>A small green-fringed cove reached by a walk. Check sea conditions and wear shoes for the uneven path.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Jungle Beach" data-type="Destination" data-icon="🌿">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jungle+Beach+Unawatuna">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="nature">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Peaceful white temple architecture"><span class="pill">Culture & views</span><button class="heart" aria-label="Save Japanese Peace Pagoda" data-save="Japanese Peace Pagoda">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>Rumassala Hill</span><span class="rating">★ 4.3</span></div><h3>Japanese Peace Pagoda</h3><p>A peaceful hilltop shrine with ocean views. Dress respectfully and follow the temple’s visitor etiquette.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Japanese Peace Pagoda" data-type="Destination" data-icon="🛕">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Japanese+Peace+Pagoda+Rumassala">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="heritage">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80" alt="Historic building with courtyard"><span class="pill">History</span><button class="heart" aria-label="Save National Maritime Museum" data-save="National Maritime Museum">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>Inside Galle Fort</span><span class="rating">Explore</span></div><h3>National Maritime Museum</h3><p>Learn about the region’s maritime history and seafaring heritage. Confirm current opening hours before visiting.</p><div class="card-foot"><button class="small-btn add-trip" data-name="National Maritime Museum" data-type="Destination" data-icon="⚓">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=National+Maritime+Museum+Galle">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="heritage">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=900&q=80" alt="Sunset over a tropical coastline"><span class="pill">Sunset</span><button class="heart" aria-label="Save Galle Fort ramparts" data-save="Galle Fort Ramparts">♡</button></div>
-          <div class="card-body"><div class="card-meta"><span>Galle Fort walls</span><span class="rating">Golden hour</span></div><h3>Ramparts sunset walk</h3><p>Take an easy stroll along the sea wall as the light changes over the Indian Ocean.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Ramparts sunset walk" data-type="Experience" data-icon="🌅">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Flag+Rock+Bastion+Galle+Fort">Map ↗</a></div></div>
-        </article>
+
+      <!-- Jump Link Filter Buttons -->
+      <div class="filters">
+        <a href = "#heritage-places">All Places</a>
+        <a href="#heritage-places" class="active"> Heritage</a>
+        <a href="#beaches-places"> Beaches</a>
+        <a href="#nature-places"> Nature & Views</a>
       </div>
+
+      <!-- 1. HERITAGE CATEGORY -->
+      <div class="category-block" id="heritage-places">
+        <div class="category-header">
+          <h3> Heritage & Culture</h3>
+          <p>Step back in time through centuries-old forts, colonial architecture, and ancient sacred spaces.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="fort.jpg" alt="Historic fort architecture">
+              <span class="pill">UNESCO Heritage</span>
+              <button class="heart" aria-label="Save Galle Fort" data-save="Galle Fort">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Galle Old Town</span><span class="rating">★ 4.8</span></div>
+              <h3>Galle Fort</h3>
+              <p>Explore historic ramparts, lighthouse views, small galleries, and charming cobblestone lanes inside this 17th-century fortress.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Galle Fort" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Sri+Lanka">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="lighthouse.jpg" alt="Galle Lighthouse">
+              <span class="pill">Landmark</span>
+              <button class="heart" aria-label="Save Galle Lighthouse" data-save="Galle Lighthouse">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Point Utrecht Bastion</span><span class="rating">★ 4.7</span></div>
+              <h3>Galle Lighthouse</h3>
+              <p>Sri Lanka's oldest light station, standing tall against palm trees with sweeping views over the ocean ramparts.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Galle Lighthouse" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Lighthouse">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="church.jpg" alt="Dutch Reformed Church">
+              <span class="pill">Colonial History</span>
+              <button class="heart" aria-label="Save Dutch Church" data-save="Dutch Reformed Church">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Church Street, Fort</span><span class="rating">★ 4.5</span></div>
+              <h3>Dutch Reformed Church</h3>
+              <p>A historic 18th-century church featuring organ lofts, Dutch governor tombs, and quiet courtyard surroundings.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Dutch Reformed Church" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dutch+Reformed+Church+Galle">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="museum.jpg" alt="National Maritime Museum">
+              <span class="pill">Museum</span>
+              <button class="heart" aria-label="Save Maritime Museum" data-save="National Maritime Museum">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Inside Galle Fort</span><span class="rating">★ 4.2</span></div>
+              <h3>National Maritime Museum</h3>
+              <p>Discover marine artifacts, shipwrecks, and centuries of maritime trading history inside an old Dutch warehouse.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="National Maritime Museum" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=National+Maritime+Museum+Galle">Map ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 2. BEACHES CATEGORY -->
+      <div class="category-block" id="beaches-places">
+        <div class="category-header">
+          <h3> Beaches & Coastal Escapes</h3>
+          <p>Unwind on golden sands, swim in tropical waters, or surf along Sri Lanka's southern shoreline.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Unawatuna Beach">
+              <span class="pill">Popular Bay</span>
+              <button class="heart" aria-label="Save Unawatuna Beach" data-save="Unawatuna Beach">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>15 mins from Galle</span><span class="rating">★ 4.6</span></div>
+              <h3>Unawatuna Beach</h3>
+              <p>A lively crescent-shaped bay lined with oceanfront cafés, ideal for swimming and relaxed afternoons.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Unawatuna Beach" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Unawatuna+Beach">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="jungle.jpg" alt="Jungle Beach">
+              <span class="pill">Hidden Gem</span>
+              <button class="heart" aria-label="Save Jungle Beach" data-save="Jungle Beach">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Rumassala Cove</span><span class="rating">★ 4.4</span></div>
+              <h3>Jungle Beach</h3>
+              <p>A secluded, tree-fringed cove reached via a scenic woodland path. Great for snorkeling and calm swimming.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Jungle Beach" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jungle+Beach+Unawatuna">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Dalawella Beach with rope swing">
+              <span class="pill">Lagoon & Sunset</span>
+              <button class="heart" aria-label="Save Dalawella Beach" data-save="Dalawella Beach">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>20 mins from Galle</span><span class="rating">★ 4.7</span></div>
+              <h3>Dalawella & Wijaya Beach</h3>
+              <p>Famous for its calm swimming lagoon, famous palm rope swing, and natural rock pools with sea turtles.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Dalawella Beach" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dalawella+Beach+Unawatuna">Map ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 3. NATURE & VIEWS CATEGORY -->
+      <div class="category-block" id="nature-places">
+        <div class="category-header">
+          <h3> Nature & Ocean Views</h3>
+          <p>Immerse yourself in lush rainforests, serene lakes, hilltop temples, and cliffside panoramas.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="japanies.jpg" alt="Japanese Peace Pagoda">
+              <span class="pill">Panoramic View</span>
+              <button class="heart" aria-label="Save Peace Pagoda" data-save="Japanese Peace Pagoda">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Rumassala Hill</span><span class="rating">★ 4.7</span></div>
+              <h3>Japanese Peace Pagoda</h3>
+              <p>A tranquil hilltop shrine built by Japanese monks offering 360-degree views of Galle harbor and the sea.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Japanese Peace Pagoda" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Japanese+Peace+Pagoda+Rumassala">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="sun.jpg" alt="Galle Ramparts Sunset">
+              <span class="pill">Golden Hour</span>
+              <button class="heart" aria-label="Save Ramparts Sunset" data-save="Galle Fort Ramparts">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Flag Rock Bastion</span><span class="rating">★ 4.9</span></div>
+              <h3>Ramparts Sunset Walk</h3>
+              <p>Take an evening walk along the high stone sea walls as the light shifts orange and crimson over the Indian Ocean.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Ramparts Sunset Walk" data-type="Experience" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Flag+Rock+Bastion+Galle+Fort">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="safari.jpg" alt="Koggala Lake Boat Safari">
+              <span class="pill">Lake & Mangroves</span>
+              <button class="heart" aria-label="Save Koggala Lake" data-save="Koggala Lake Safari">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Koggala (25 mins)</span><span class="rating">★ 4.6</span></div>
+              <h3>Koggala Lake Boat Safari</h3>
+              <p>Cruise peaceful waters, explore mangrove channels, visit Cinnamon Island, and spot rare birdlife and wildlife.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Koggala Lake Boat Safari" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Koggala+Lake+Boat+Safari">Map ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img loading="lazy" src="forest.jpg" alt="Sinharaja Rainforest Trek">
+              <span class="pill">UNESCO Rainforest</span>
+              <button class="heart" aria-label="Save Sinharaja Forest" data-save="Sinharaja Rainforest">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>Day trip from Galle</span><span class="rating">★ 4.8</span></div>
+              <h3>Sinharaja Forest Reserve</h3>
+              <p>Trek through Sri Lanka's premier tropical rainforest, packed with waterfalls, endemic birds, and rich biodiversity.</p>
+              <div class="card-foot">
+                <button class="small-btn add-trip" data-name="Sinharaja Forest Reserve" data-type="Destination" data-icon="">+ Add to trip</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sinharaja+Forest+Reserve">Map ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <section class="section tint" id="stays">
     <div class="wrap">
-      <div class="section-head"><div><span class="eyebrow">Rest easy</span><h2>Find your stay</h2></div><p>Choose a heritage hideaway inside the Fort or a coastal base close to the beaches.</p></div>
-      <div class="filters" data-filter-group="hotel">
-        <button class="filter-btn active" data-filter="all">All stays</button><button class="filter-btn" data-filter="boutique">Boutique</button><button class="filter-btn" data-filter="luxury">Luxury</button><button class="filter-btn" data-filter="coast">Coast & beach</button>
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Rest easy</span>
+          <h2>Find your stay</h2>
+        </div>
+        <p>Choose a heritage hideaway inside the Fort or a coastal base close to the beaches.</p>
       </div>
+
+      <div class="filters" data-filter-group="hotel">
+        <a href="#AllStays" class="active">All stays</a>
+        <a href="#Boutique">Boutique</a>
+        <a href="#Luxury">Luxury</a>
+        <a href="#Coast">Coast & beach</a>
+      </div>
+
       <div class="cards" id="hotel-cards">
-        <article class="card" data-category="boutique">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Boutique hotel pool"><span class="pill">Boutique heritage</span></div>
-          <div class="card-body"><div class="card-meta"><span>28 Church Street, Fort</span><span class="rating">★ 4.5</span></div><h3>Galle Fort Hotel</h3><p>A restored heritage mansion in the heart of the Fort, ideal for travelers who want to stay close to historic streets.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Galle Fort Hotel" data-type="Hotel" data-icon="🛏️">+ Add stay</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Hotel">Details ↗</a></div></div>
+        <!-- 1. Galle Fort Hotel -->
+        <article class="card" data-category="boutique" id="AllStays">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Boutique hotel pool">
+            <span class="pill">Boutique heritage</span>
+            <button class="heart" aria-label="Save Galle Fort Hotel" data-save="Galle Fort Hotel">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>28 Church Street, Fort</span>
+              <span class="rating">★ 4.5</span>
+            </div>
+            <h3>Galle Fort Hotel</h3>
+            <p>A restored heritage mansion in the heart of the Fort, ideal for travelers who want to stay close to historic streets.</p>
+            <div class="card-price">From <strong>$180</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Galle Fort Hotel" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Hotel">Details ↗</a>
+            </div>
+          </div>
         </article>
+
+        <!-- 2. The Fort Printers -->
         <article class="card" data-category="boutique">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Elegant boutique hotel room"><span class="pill">Heritage boutique</span></div>
-          <div class="card-body"><div class="card-meta"><span>39 Pedlar Street, Fort</span><span class="rating">★ 4.6</span></div><h3>The Fort Printers</h3><p>A characterful heritage property with courtyard spaces, close to Fort cafés, shops and landmarks.</p><div class="card-foot"><button class="small-btn add-trip" data-name="The Fort Printers" data-type="Hotel" data-icon="🛏️">+ Add stay</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Fort+Printers+Galle">Details ↗</a></div></div>
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Elegant boutique hotel room">
+            <span class="pill">Heritage boutique</span>
+            <button class="heart" aria-label="Save The Fort Printers" data-save="The Fort Printers">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>39 Pedlar Street, Fort</span>
+              <span class="rating">★ 4.6</span>
+            </div>
+            <h3>The Fort Printers</h3>
+            <p>A characterful heritage property with courtyard spaces, close to Fort cafés, shops and landmarks.</p>
+            <div class="card-price">From <strong>$150</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="The Fort Printers" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Fort+Printers+Galle">Details ↗</a>
+            </div>
+          </div>
         </article>
+
+        <!-- 3. Jetwing Lighthouse -->
         <article class="card" data-category="luxury">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Oceanfront resort swimming pool"><span class="pill">Oceanfront</span></div>
-          <div class="card-body"><div class="card-meta"><span>Dadella, outside central Galle</span><span class="rating">Luxury</span></div><h3>Jetwing Lighthouse</h3><p>A coastal resort known for its ocean-facing setting, a good option for a resort-style stay.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Jetwing Lighthouse" data-type="Hotel" data-icon="🛏️">+ Add stay</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.jetwinghotels.com/jetwinglighthouse/">Official site ↗</a></div></div>
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Oceanfront resort swimming pool">
+            <span class="pill">Oceanfront</span>
+            <button class="heart" aria-label="Save Jetwing Lighthouse" data-save="Jetwing Lighthouse">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Dadella, outside central Galle</span>
+              <span class="rating">★ 4.8</span>
+            </div>
+            <h3>Jetwing Lighthouse</h3>
+            <p>A coastal resort known for its ocean-facing setting, a good option for a resort-style stay.</p>
+            <div class="card-price">From <strong>$220</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Jetwing Lighthouse" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.jetwinghotels.com/jetwinglighthouse/">Official site ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Amangalla -->
+        <article class="card" data-category="luxury">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80" alt="Luxury colonial interior">
+            <span class="pill">Ultra Luxury</span>
+            <button class="heart" aria-label="Save Amangalla" data-save="Amangalla">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Church Street, Galle Fort</span>
+              <span class="rating">★ 4.9</span>
+            </div>
+            <h3>Amangalla</h3>
+            <p>Housed in historic 17th-century buildings, offering timeless colonial elegance, fine dining, and a world-class spa.</p>
+            <div class="card-price">From <strong>$650</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Amangalla" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Amangalla+Galle+Fort">Details ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Fort Bazaar -->
+        <article class="card" data-category="boutique">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Modern boutique courtyard">
+            <span class="pill">Design Boutique</span>
+            <button class="heart" aria-label="Save Fort Bazaar" data-save="Fort Bazaar">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Church Street, Fort</span>
+              <span class="rating">★ 4.7</span>
+            </div>
+            <h3>Fort Bazaar</h3>
+            <p>A vibrant townhouse hotel featuring a blend of traditional architecture, contemporary design, and an open-air cinema lounge.</p>
+            <div class="card-price">From <strong>$200</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Fort Bazaar" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fort+Bazaar+Galle">Details ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Tri Lanka -->
+        <article class="card" data-category="coast">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Eco resort lake view">
+            <span class="pill">Eco Sanctuary</span>
+            <button class="heart" aria-label="Save Tri Lanka" data-save="Tri Lanka">♡</button>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>Koggala Lake (25 mins)</span>
+              <span class="rating">★ 4.8</span>
+            </div>
+            <h3>Tri Lanka Eco Resort</h3>
+            <p>A stunning sustainable luxury resort on the banks of Koggala Lake, featuring circular water villas and a dramatic pool.</p>
+            <div class="card-price">From <strong>$310</strong> <small>/ night</small></div>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Tri Lanka" data-type="Hotel" data-icon="">+ Add stay</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tri+Lanka+Koggala+Lake">Details ↗</a>
+            </div>
+          </div>
         </article>
       </div>
       <p class="notice">Accommodation rates and availability change by date and room type. Use the links to confirm current prices, facilities and booking terms.</p>
     </div>
   </section>
-
   <section class="section" id="food">
     <div class="wrap">
-      <div class="section-head"><div><span class="eyebrow">A taste of the south</span><h2>Good food, nearby</h2></div><p>Find a local meal, a relaxed café or a special dinner during your Galle visit.</p></div>
+      <div class="section-headAll restaurants"><div><span class="eyebrow">A taste of the south</span><h2>Good food, nearby</h2></div><p>Find a local meal, a relaxed café or a special dinner during your Galle visit.</p></div>
       <div class="filters" data-filter-group="restaurant">
-        <button class="filter-btn active" data-filter="all">All restaurants</button><button class="filter-btn" data-filter="local">Sri Lankan</button><button class="filter-btn" data-filter="cafe">Café & bistro</button><button class="filter-btn" data-filter="fine">Special occasion</button>
+         
+        <a href = #AllPlaces>All restaurants</a>
+        <a href = #Heritage>Sri Lankan</a>
+        <a href = #Beaches>Café & bistro</a>
+        <a href = #nature>Special occasion</a>
+        
+        
       </div>
       <div class="cards" id="restaurant-cards">
         <article class="card" data-category="local">
@@ -140,20 +476,9 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head"><div><span class="eyebrow">Before you go</span><h2>A few helpful tips</h2></div><p>Make your trip smoother with a little planning.</p></div>
-      <div class="tips-grid">
-        <article class="tip"><div class="tip-icon">👟</div><h3>Explore on foot</h3><p>Galle Fort is best enjoyed slowly. Wear comfortable shoes for the ramparts and uneven streets.</p></article>
-        <article class="tip"><div class="tip-icon">🌦️</div><h3>Check the sea & weather</h3><p>Coastal conditions change. Check local forecasts and swim only where conditions are suitable.</p></article>
-        <article class="tip"><div class="tip-icon">📍</div><h3>Confirm before you go</h3><p>Use the map links to check routes, opening hours, current reviews and booking availability.</p></article>
-      </div>
-      <p class="notice">*Travel times are rough estimates and depend on traffic and your starting point. Ratings are indicative snapshots, not live data. This demo does not make hotel or restaurant reservations.</p>
-    </div>
-  </section>
-</main>
+  
 
-<footer><div class="wrap footer-row"><a class="brand" href="#"><span class="brand-mark">✦</span><span>explore<span style="color:#f2a37c">galle</span></span></a><p>Made for curious travelers · Galle, Sri Lanka</p><p><a href="#destinations">Explore again ↑</a></p></div></footer>
+<footer><div class="wrap footer-row"><a class="brand" href="#"><span class="brand-mark">✦</span><span>explore<span style="color:#f2a37c">galle</span></span></a><p><a href="#destinations">Explore again ↑</a></p></div></footer>
 <div class="toast" id="toast" role="status"></div>
 
 <script src="script.js" defer></script>
