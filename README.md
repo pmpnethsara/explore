@@ -1,13 +1,13 @@
 ## https://pmpnethsara.github.io/explore/
-# Explore Galle 🇱🇰
+# Explore Sri Lanka 🇱🇰
 
-A Sri Lanka travel planning website designed to help travelers explore the beautiful coastal city of Galle. Visitors can discover popular destinations, explore accommodation and restaurants, and create a personalized travel itinerary.
+A Sri Lanka travel planning website designed to help travelers explore the beautiful of Sri Lanka. Visitors can discover popular destinations, explore accommodation and restaurants, and create a personalized travel itinerary.
 
 ## 🌴 Features
 
-- **Explore Destinations** – Discover popular places such as Galle Fort, Unawatuna Beach, Jungle Beach, and the Japanese Peace Pagoda.
-- **Accommodation Guide** – Explore hotels and places to stay in Galle.
-- **Restaurants and Cafés** – Discover dining options for your trip.
+- **Explore Destinations** 
+- **Accommodation Guide** 
+- **Restaurants and Cafés** 
 - **Category Filters** – Filter destinations based on your interests.
 - **Favorites** – Mark places you would like to visit.
 - **Trip Planner** – Add destinations and other places to your travel plan.
@@ -28,7 +28,7 @@ A Sri Lanka travel planning website designed to help travelers explore the beaut
 ## 📂 Project Structure
 
 ```text
-explore-galle/
+explore-Sri Lanka/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -132,4 +132,4 @@ This project is intended for educational and personal development purposes. Add 
 
 ---
 
-**Explore Galle — Discover the beauty of Sri Lanka, one destination at a time.** 🇱🇰
+**Explore Sri Lanka — Discover the beauty of Sri Lanka, one destination at a time.** 🇱🇰
