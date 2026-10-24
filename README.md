@@ -40,55 +40,6 @@ explore-Sri Lanka/
 - `script.js` – Interactive features and trip-planning functionality.
 - `README.md` – Project documentation.
 
-## 🚀 Run the Website Locally
-
-### 1. Clone the repository
-
-Replace `YOUR-USERNAME` with your GitHub username.
-
-```bash
-git clone https://github.com/YOUR-USERNAME/explore-galle.git
-```
-
-### 2. Open the project directory
-
-```bash
-cd explore-galle
-```
-
-### 3. Start a local PHP server
-
-If PHP is installed, run:
-
-```bash
-php -S localhost:8000
-```
-
-### 4. Open the website
-
-Visit the following address in your browser:
-
-http://localhost:8000
-
-You can also open `index.html` directly in a browser for basic static website functionality.
-
-## 🌐 Deploy with GitHub Pages
-
-1. Push your project files to a GitHub repository.
-2. Open the repository on GitHub.
-3. Navigate to **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder.
-6. Click **Save**.
-
-Your website will be available at:
-
-```text
-https://YOUR-USERNAME.github.io/explore-galle/
-```
-
-Replace `YOUR-USERNAME` with your GitHub username. GitHub may take a few minutes to publish the website.
-
 ## 📥 Collecting User Travel Requests
 
 The website can be extended to collect information from visitors, such as:
@@ -124,12 +75,7 @@ The goal of Explore Galle is to make planning a trip to Galle easier by bringing
 - Include estimated travel costs and transportation options.
 - Add destination reviews and ratings.
 - Improve accessibility and multilingual support.
-- Add links to official hotel, restaurant, and attraction websites.
+- Add All other Travel destinations.
 
-## 📄 License
-
-This project is intended for educational and personal development purposes. Add a license file if you want to specify how others may use, modify, and distribute your code.
-
----
 
 **Explore Sri Lanka — Discover the beauty of Sri Lanka, one destination at a time.** 🇱🇰
