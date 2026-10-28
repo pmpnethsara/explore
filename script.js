@@ -1,13 +1,15 @@
-// Prices for transportation per day (in USD)
+/* 
+ * script.js - Core interactive logic for the Explore Galle Chinese tourist platform
+ * Handles dynamic cost calculation, trip planning, UI state management, and EmailJS integration
+ */
+
+// Daily transportation rates in USD
 const TRANSPORT_RATES = {
-  "Tuk-Tuk": 15,
-  "Private AC Car": 45,
-  "Luxury Van": 70,
-  "Self Drive / Scooter": 10,
-  "Public Transit": 5
+  "Private AC Car": 100,
+  "Luxury Van": 150
 };
 
-// Default estimated cost for places/food if not specified
+// Default estimated costs for activities, places, and food items
 const DEFAULT_PRICES = {
   "Hotel": 100,
   "Restaurant": 25,
@@ -15,15 +17,15 @@ const DEFAULT_PRICES = {
   "Experience": 15
 };
 
-// Hotel estimated price mapping based on HTML text
+// Specific estimated hotel pricing database mapping (English Hotel Names)
 const HOTEL_PRICES = {
   "Galle Fort Hotel": 350,
-  "Skyline Stay Guest House": 40,
+  "Skyline Stay Guest House": 50,
   "The Fort Printers": 250,
   "Jetwing Lighthouse": 220,
   "Amangalla": 1230,
   "Fort Bazaar": 280,
-  "Tri Lanka": 195
+  "Tri Ahangama": 195
 };
 
 const trip = [];
@@ -34,6 +36,7 @@ const downloadButton = document.getElementById("download-plan");
 const toast = document.getElementById("toast");
 let currentPlan = "";
 
+// Notification toast helper function
 function notify(message) {
   toast.textContent = message;
   toast.classList.add("show");
@@ -41,7 +44,7 @@ function notify(message) {
   notify.timer = setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-// Dynamic Cost Calculation Function
+// Calculate total live trip expenses based on selected items, days, and travelers
 function calculateTotalCost() {
   const days = Number(document.getElementById("days").value) || 1;
   const travelers = Number(document.getElementById("traveler-count").value) || 1;
@@ -51,17 +54,17 @@ function calculateTotalCost() {
   const stays = trip.filter(item => item.type === "Hotel");
   const otherItems = trip.filter(item => item.type !== "Hotel");
 
-  // Calculate Stays Cost: Sum of room price * nights
+  // Compute total accommodation cost (room rate multiplied by nights)
   let stayTotal = 0;
   stays.forEach(stay => {
     const nightPrice = stay.price || HOTEL_PRICES[stay.name] || DEFAULT_PRICES["Hotel"];
     stayTotal += nightPrice * days;
   });
 
-  // Calculate Transport Cost: Transport rate per day * total days
+  // Compute total transportation cost (daily rate multiplied by duration)
   const transportTotal = transportRate * days;
 
-  // Calculate Activities & Food Cost: Item price * number of travelers
+  // Compute activities and dining cost (item cost multiplied by number of travelers)
   let itemsTotal = 0;
   otherItems.forEach(item => {
     const itemPrice = item.price || DEFAULT_PRICES[item.type] || 15;
@@ -70,7 +73,7 @@ function calculateTotalCost() {
 
   const grandTotal = stayTotal + transportTotal + itemsTotal;
 
-  // Update UI cost breakdown
+  // Render calculated cost metrics to the UI breakdown panel
   document.getElementById("stay-cost").textContent = `$${stayTotal.toLocaleString()}`;
   document.getElementById("transport-cost").textContent = `$${transportTotal.toLocaleString()}`;
   document.getElementById("items-cost").textContent = `$${itemsTotal.toLocaleString()}`;
@@ -79,10 +82,11 @@ function calculateTotalCost() {
   return { stayTotal, transportTotal, itemsTotal, grandTotal };
 }
 
+// Render selected trip items list inside the trip planner panel
 function renderTrip() {
   tripList.innerHTML = "";
   if (!trip.length) {
-    tripList.innerHTML = '<div class="empty">Your trip is waiting to happen. Add a destination, hotel or restaurant above.</div>';
+    tripList.innerHTML = '<div class="empty">您的行程清单目前为空，请在上方各版块点击“添加到行程”添加心仪项目。</div>';
     calculateTotalCost();
     return;
   }
@@ -90,9 +94,9 @@ function renderTrip() {
   trip.forEach((item, index) => {
     const row = document.createElement("div");
     row.className = "trip-item";
-    row.innerHTML = `<div class="trip-icon">${item.icon}</div><div><strong></strong><small></small></div><button class="remove" aria-label="Remove item">×</button>`;
+    row.innerHTML = `<div class="trip-icon">${item.icon}</div><div><strong></strong><small></small></div><button class="remove" aria-label="移除项目">×</button>`;
     row.querySelector("strong").textContent = item.name;
-    row.querySelector("small").textContent = `${item.type} ${item.price ? `($${item.price})` : ''}`;
+    row.querySelector("small").textContent = `${item.type === 'Hotel' ? '住宿酒店' : item.type === 'Restaurant' ? '特色餐厅' : '精选景点'} ${item.price ? `($${item.price})` : ''}`;
     row.querySelector(".remove").addEventListener("click", () => {
       trip.splice(index, 1);
       renderTrip();
@@ -105,12 +109,12 @@ function renderTrip() {
   calculateTotalCost();
 }
 
-// Event Listeners for controls updating total cost live
+// Event bindings for dynamic cost recalculations when preferences change
 document.getElementById("days").addEventListener("change", calculateTotalCost);
 document.getElementById("traveler-count").addEventListener("input", calculateTotalCost);
 document.getElementById("transport-type").addEventListener("change", calculateTotalCost);
 
-// Filter buttons
+// Category filter buttons behavior setup
 document.querySelectorAll("[data-filter-group]").forEach(group => {
   group.querySelectorAll(".filter-btn").forEach(button => {
     button.addEventListener("click", () => {
@@ -129,13 +133,13 @@ document.querySelectorAll("[data-filter-group]").forEach(group => {
   });
 });
 
-// Add to trip button clicks
+// Add item to trip planner shortlist buttons listener
 document.querySelectorAll(".add-trip").forEach(button => {
   button.addEventListener("click", () => {
     const name = button.dataset.name;
     const type = button.dataset.type;
     if (trip.some(item => item.name === name)) {
-      notify("Already added to your trip.");
+      notify("该项目已经存在于您的行程清单中。");
       return;
     }
 
@@ -144,37 +148,37 @@ document.querySelectorAll(".add-trip").forEach(button => {
 
     renderTrip();
     button.classList.add("selected");
-    button.textContent = "✓ Added";
-    notify(`${name} added to your trip`);
+    button.textContent = "✓ 已添加";
+    notify(`已成功添加 ${name}`);
   });
 });
 
-// Save heart buttons
+// Card favorite heart toggle action listener
 document.querySelectorAll("[data-save]").forEach(button => {
   button.addEventListener("click", () => {
     button.classList.toggle("saved");
     button.textContent = button.classList.contains("saved") ? "♥" : "♡";
-    notify(button.classList.contains("saved") ? `${button.dataset.save} saved` : "Removed from saved places");
+    notify(button.classList.contains("saved") ? `已收藏 ${button.dataset.save}` : "已从收藏夹移除");
   });
 });
 
-// Create Itinerary Button
+// Generate Itinerary and dispatch EmailJS backend trigger
 document.getElementById("make-plan").addEventListener("click", () => {
   if (!trip.length) {
-    notify("Add at least one place, stay or restaurant first.");
+    notify("请先在上方至少添加一个景点、住宿或餐厅。");
     return;
   }
 
-  const name = document.getElementById("traveler-name").value || "Valued Guest";
-  const email = document.getElementById("traveler-email").value || "Not provided";
+  const name = document.getElementById("traveler-name").value || "尊贵游客";
+  const email = document.getElementById("traveler-email").value || "未提供邮箱";
   const travelers = document.getElementById("traveler-count").value || "1";
-  const transport = document.getElementById("transport-type").value;
-  const notes = document.getElementById("trip-notes").value || "None";
+  const transport = document.getElementById("transport-type").value === "Private AC Car" ? "豪华私家空调轿车" : "舒适商务车";
+  const notes = document.getElementById("trip-notes").value || "无";
 
   const dateValue = document.getElementById("start-date").value;
   const days = Number(document.getElementById("days").value);
   const start = dateValue ? new Date(`${dateValue}T12:00:00`) : null;
-  const dateLabel = start ? start.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }) : "Date not set";
+  const dateLabel = start ? start.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" }) : "未设定具体日期";
 
   const { stayTotal, transportTotal, itemsTotal, grandTotal } = calculateTotalCost();
 
@@ -182,51 +186,52 @@ document.getElementById("make-plan").addEventListener("click", () => {
   const food = trip.filter(item => item.type === "Restaurant");
   const places = trip.filter(item => item.type !== "Hotel" && item.type !== "Restaurant");
 
+  // Construct structured text itinerary layout
   const lines = [
     "==========================================",
-    "  EXPLORE GALLE — CUSTOM TRAVEL ITINERARY  ",
+    "       斯里兰卡加勒 — 专属定制旅行行程单       ",
     "==========================================",
-    `Traveler Name: ${name}`,
-    `Contact Email: ${email}`,
-    `Travelers: ${travelers} person(s)`,
-    `Arrival Date: ${dateLabel}`,
-    `Duration: ${days} Day(s) / ${days} Night(s)`,
-    `Selected Transport: ${transport}`,
-    `Special Notes: ${notes}`,
+    `游客姓名: ${name}`,
+    `联系邮箱: ${email}`,
+    `出行人数: ${travelers} 人`,
+    `抵达日期: ${dateLabel}`,
+    `行程天数: ${days} 天 / ${days} 晚`,
+    `包车交通: ${transport}`,
+    `特殊备注: ${notes}`,
     "",
     "------------------------------------------",
-    "  DAILY OUTLINE",
+    "  每日行程景点规划",
     "------------------------------------------",
     ...Array.from({ length: days }, (_, i) => {
       const dayPlaces = places.filter((_, idx) => idx % days === i);
       const dayFood = food.filter((_, idx) => idx % days === i);
-      let line = `Day ${i + 1}: `;
-      line += dayPlaces.length ? dayPlaces.map(x => x.name).join(" → ") : "Explore Galle Fort & coastline at your leisure";
-      if (dayFood.length) line += ` | Food: ${dayFood.map(x => x.name).join(", ")}`;
+      let line = `第 ${i + 1} 天: `;
+      line += dayPlaces.length ? dayPlaces.map(x => x.name).join(" → ") : "悠闲探索 Galle Fort 及南海岸风光";
+      if (dayFood.length) line += ` | 餐饮推荐: ${dayFood.map(x => x.name).join(", ")}`;
       return line;
     }),
     "",
     "------------------------------------------",
-    "  ACCOMMODATION",
+    "  精选住宿安排",
     "------------------------------------------",
-    stays.length ? stays.map(x => `• ${x.name} ($${x.price || HOTEL_PRICES[x.name]}/night)`).join("\n") : "• Choose and book accommodation separately.",
+    stays.length ? stays.map(x => `• ${x.name} ($${x.price || HOTEL_PRICES[x.name]}/晚)`).join("\n") : "• 住宿请根据喜好另行预订。",
     "",
     "------------------------------------------",
-    "  SELECTED EXPERIENCES & DINING",
+    "  已选特色体验与餐饮清单",
     "------------------------------------------",
-    ...trip.map(x => `• ${x.type}: ${x.name}`),
+    ...trip.map(x => `• [${x.type === 'Hotel' ? '住宿' : x.type === 'Restaurant' ? '餐厅' : '景点'}] ${x.name}`),
     "",
     "------------------------------------------",
-    "  ESTIMATED COST BREAKDOWN",
+    "  参考费用预算明细 (USD)",
     "------------------------------------------",
-    ` Accommodation Total (${days} nights): $${stayTotal.toLocaleString()}`,
-    ` Transport Total (${transport}): $${transportTotal.toLocaleString()}`,
-    ` Activities & Dining Est. (${travelers} travelers): $${itemsTotal.toLocaleString()}`,
+    ` 住宿费用总计 (${days} 晚): $${stayTotal.toLocaleString()}`,
+    ` 包车交通总计 (${transport}): $${transportTotal.toLocaleString()}`,
+    ` 门票餐饮消费预估 (${travelers} 人): $${itemsTotal.toLocaleString()}`,
     "------------------------------------------",
-    ` ESTIMATED GRAND TOTAL: $${grandTotal.toLocaleString()}`,
+    ` 预估总计参考费用: $${grandTotal.toLocaleString()}`,
     "==========================================",
     "",
-    "Note: Prices are estimates. Please confirm final rates directly with providers."
+    "温馨提示：以上价格为系统参考估算，最终预订费用请与相关服务商直接确认。"
   ];
 
   currentPlan = lines.join("\n");
@@ -234,7 +239,7 @@ document.getElementById("make-plan").addEventListener("click", () => {
   output.classList.add("show");
   copyButton.hidden = downloadButton.hidden = false;
 
-  // Send the full itinerary with total cost via EmailJS
+  // Send formatted summary via EmailJS API integration
   if (window.emailjs) {
     emailjs.send("service_ymfzk6x", "template_avjtnld", {
       traveler_name: name,
@@ -244,34 +249,34 @@ document.getElementById("make-plan").addEventListener("click", () => {
       submission_date: new Date().toLocaleString()
     })
     .then(() => {
-      notify("Itinerary generated & sent to your email!");
+      notify("定制行程单已生成并成功发送至您的邮箱！");
     }, (error) => {
-      console.error("Email sending failed:", error);
-      notify("Itinerary generated successfully!");
+      console.error("Email dispatch failed:", error);
+      notify("行程单生成成功！");
     });
   } else {
-    notify("Itinerary created!");
+    notify("专属定制行程单已成功创建！");
   }
 });
 
-// Clear plan action
+// Clear trip selections action handler
 document.getElementById("clear-plan").addEventListener("click", () => {
   trip.length = 0;
   document.querySelectorAll(".add-trip").forEach(button => {
     button.classList.remove("selected");
-    button.textContent = button.dataset.type === "Hotel" ? "+ Add stay" : "+ Add to trip";
+    button.textContent = button.dataset.type === "Hotel" ? "+ 添加住宿" : "+ 添加到行程";
   });
   renderTrip();
   output.classList.remove("show");
   copyButton.hidden = downloadButton.hidden = true;
-  notify("Trip selections cleared");
+  notify("已清空当前所有行程选择");
 });
 
-// Copy to Clipboard
+// Copy formatted text itinerary to clipboard helper
 copyButton.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(currentPlan);
-    notify("Itinerary copied!");
+    notify("定制行程单已成功复制到剪贴板！");
   } catch {
     const area = document.createElement("textarea");
     area.value = currentPlan;
@@ -279,20 +284,20 @@ copyButton.addEventListener("click", async () => {
     area.select();
     document.execCommand("copy");
     area.remove();
-    notify("Itinerary copied!");
+    notify("定制行程单已成功复制！");
   }
 });
 
-// Download TXT File
+// Download itinerary content as a text file handler
 downloadButton.addEventListener("click", () => {
   const blob = new Blob([currentPlan], { type: "text/plain;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "my-galle-itinerary.txt";
+  a.download = "my-galle-luxury-itinerary.txt";
   a.click();
   URL.revokeObjectURL(url);
 });
 
-// Initial load
+// Initial render call on page load
 renderTrip();

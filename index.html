@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Galle — Your Southern Coast Escape</title>
+  <title>探索加勒 — 您的斯里兰卡南海岸奢华度假指南</title>
   <link rel="stylesheet" href="style.css">
   
-
+  <!-- EmailJS SDK initialization for automated itinerary delivery -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
      (function(){
@@ -17,499 +17,549 @@
   </script>
 </head>
 <body>
+
+<!-- Header section with smooth navigation links -->
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#" aria-label="Explore home"><span class="brand-mark">✦</span><span>explore<span style="color:var(--orange)">Sri Lanka</span></span></a>
-    <nav aria-label="Main navigation">
-      <a href="#destinations">Destinations</a><a href="#stays">Stay</a><a href="#food">Eat</a><a href="#planner">Trip planner</a>
-      <a class="nav-cta" href="#planner">Plan my trip ↗</a>
+    <a class="brand" href="#" aria-label="首页"><span class="brand-mark">✦</span><span>探索<span style="color:var(--orange)">斯里兰卡</span></span></a>
+    <nav aria-label="主导航">
+      <a href="#destinations">精选景点</a>
+      <a href="#stays">高端住宿</a>
+      <a href="#food">地道美食</a>
+      <a href="#planner">行程定制</a>
+      <a class="nav-cta" href="#planner">定制专属行程 ↗</a>
     </nav>
   </div>
 </header>
 
 <main>
+  <!-- Hero section -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Sri Lanka · Southern coast</span>
-        <h1>Find your kind<br>of <em>Galle escape.</em></h1>
-        <p class="hero-copy">Wander old fort streets, find a stay you’ll love, and taste your way around the south coast.</p>
-        <div class="hero-actions"><a class="btn" href="#destinations">Explore places <span>↗</span></a><a class="btn secondary" href="#planner">Build my Trip</a></div>
-        <div class="hero-note"><span> Historic streets & ocean views</span><span><span> Made for slow travel</span></div>
+        <span class="eyebrow">斯里兰卡 · 南部海岸私藏秘境</span>
+        <h1>开启您的<br><em>加勒海岛慢时光。</em></h1>
+        <p class="hero-copy">穿梭于400年历史的加勒古堡街头，入住屡获殊荣的精品海景府邸，品味南海岸独有的热带浪漫与南亚风情。</p>
+        <div class="hero-actions">
+          <a class="btn" href="#destinations">探索热门景点 <span>↗</span></a>
+          <a class="btn secondary" href="#planner">规划我的行程</a>
+        </div>
+        <div class="hero-note">
+          <span> 沉浸式历史街区与绝美日落</span>
+          <span> 专属定制私家慢旅</span>
+        </div>
       </div>
       <div class="hero-photo">
-        <img src="images/banner.jpg" alt="Coastal scenery with tropical palms" >
-        <div class="photo-label"><small>DON’T MISS</small><strong>Galle Fort at golden hour</strong></div>
+        <img src="images/banner.jpg" alt="Galle coastline with tropical palms">
+        <div class="photo-label"><small>编辑精选必打卡</small><strong>Galle Fort at golden hour</strong></div>
       </div>
     </div>
   </section>
 
-
-  <section class="section" id="destinations">   <!-- Destinations Section -->
+  <!-- Destinations section featuring categorized local hotspots -->
+  <section class="section" id="destinations">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="eyebrow">Make memories</span>
-          <h2>Places worth the detour</h2>
+          <span class="eyebrow">灵感与体验</span>
+          <h2>不虚此行的宝藏之地</h2>
         </div>
-        <p>From heritage walks to quiet coves and rainforest trails, choose the experiences that feel like your kind of trip.</p>
+        <p>从世界文化遗产古堡漫步到隐秘冲浪海湾与生态热带雨林，随心定制您的南海岸假期。</p>
       </div>
 
       <div class="filters">
-        <a href = "#heritage-places">All Places</a>
-        <a href="#heritage-places" class="active"> Heritage</a>
-        <a href="#beaches-places"> Beaches</a>
-        <a href="#nature-places"> Nature & Views</a>
+        <a href="#heritage-places" class="active">全部文化与风光</a>
+        <a href="#heritage-places">历史古迹</a>
+        <a href="#beaches-places">绝美海滩</a>
+        <a href="#nature-places">自然生态</a>
       </div>
 
+      <!-- Category 1: Heritage & Culture -->
       <div class="category-block" id="heritage-places">
         <div class="category-header">
-          <h3> Heritage & Culture</h3>
-          <p>Step back in time through centuries-old forts, colonial architecture, and ancient sacred spaces.</p>
+          <h3> 历史建筑与文化遗产</h3>
+          <p>漫步于经历数百年岁月洗礼的欧式堡垒、古老灯塔与充满异国情调的街巷。</p>
         </div>
         <div class="cards">
+          <!-- Card 1: Galle Fort -->
           <article class="card">
             <div class="card-img">
-              <img loading="lazy" src="images/fort.jpg" alt="Historic fort architecture">
-              <span class="pill">UNESCO Heritage</span>
+              <img loading="lazy" src="images/fort.jpg" alt="Galle Fort">
+              <span class="pill">世界文化遗产</span>
               <button class="heart" aria-label="Save Galle Fort" data-save="Galle Fort">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Galle Old Town</span><span class="rating">★ 4.8</span></div>
               <h3>Galle Fort</h3>
-              <p>Explore historic ramparts, lighthouse views, small galleries, and charming cobblestone lanes inside this 17th-century fortress.</p>
+              <p>探索17世纪荷兰殖民时期的防御工事、白兰地色调的古宅、精品买手店与独立画廊。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Galle Fort" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Sri+Lanka">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Galle Fort" data-type="Destination" data-icon="🏛️">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Sri+Lanka">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 2: Galle Lighthouse -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="images/lighthouse.jpg" alt="Galle Lighthouse">
-              <span class="pill">Landmark</span>
+              <span class="pill">经典地标</span>
               <button class="heart" aria-label="Save Galle Lighthouse" data-save="Galle Lighthouse">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Point Utrecht Bastion</span><span class="rating">★ 4.7</span></div>
               <h3>Galle Lighthouse</h3>
-              <p>Sri Lanka's oldest light station, standing tall against palm trees with sweeping views over the ocean ramparts.</p>
+              <p>斯里兰卡最古老的标志性灯塔，耸立在蔚蓝海岸与摇曳的椰林之间，摄影打卡绝佳机位。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Galle Lighthouse" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Lighthouse">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Galle Lighthouse" data-type="Destination" data-icon="🗼">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Lighthouse">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 3: Dutch Reformed Church -->
           <article class="card">
             <div class="card-img">
-              <img loading="lazy" src="images/fort.jpg" alt="Dutch Reformed Church">
-              <span class="pill">Colonial History</span>
-              <button class="heart" aria-label="Save Dutch Church" data-save="Dutch Reformed Church">♡</button>
+              <img loading="lazy" src="images/church.jpg" alt="Dutch Reformed Church">
+              <span class="pill">殖民古迹</span>
+              <button class="heart" aria-label="Save Dutch Reformed Church" data-save="Dutch Reformed Church">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Church Street, Fort</span><span class="rating">★ 4.5</span></div>
               <h3>Dutch Reformed Church</h3>
-              <p>A historic 18th-century church featuring organ lofts, Dutch governor tombs, and quiet courtyard surroundings.</p>
+              <p>建于18世纪的巴洛克风格古老教堂，内部保留着雕花木长椅、管风琴和历史感十足的地砖。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Dutch Reformed Church" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dutch+Reformed+Church+Galle">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Dutch Reformed Church" data-type="Destination" data-icon="⛪">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dutch+Reformed+Church+Galle">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 4: National Maritime Museum -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="images/museum.jpg" alt="National Maritime Museum">
-              <span class="pill">Museum</span>
-              <button class="heart" aria-label="Save Maritime Museum" data-save="National Maritime Museum">♡</button>
+              <span class="pill">历史展馆</span>
+              <button class="heart" aria-label="Save National Maritime Museum" data-save="National Maritime Museum">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Inside Galle Fort</span><span class="rating">★ 4.2</span></div>
               <h3>National Maritime Museum</h3>
-              <p>Discover marine artifacts, shipwrecks, and centuries of maritime trading history inside an old Dutch warehouse.</p>
+              <p>坐落于前荷兰东印度公司仓库内，陈列着沉船遗物、海洋标本与海上丝绸之路珍贵档案。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="National Maritime Museum" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=National+Maritime+Museum+Galle">Map ↗</a>
+                <button class="small-btn add-trip" data-name="National Maritime Museum" data-type="Destination" data-icon="⚓">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=National+Maritime+Museum+Galle">查看地图 ↗</a>
               </div>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- 2. BEACHES CATEGORY -->
+      <!-- Category 2: Beaches & Coastal Escapes -->
       <div class="category-block" id="beaches-places">
         <div class="category-header">
-          <h3> Beaches & Coastal Escapes</h3>
-          <p>Unwind on golden sands, swim in tropical waters, or surf along Sri Lanka's southern shoreline.</p>
+          <h3> 阳光海岸与浪漫海湾</h3>
+          <p>感受印度洋温润的海风，在细腻金沙滩与清澈泻湖中享受高端滨海度假生活。</p>
         </div>
         <div class="cards">
+          <!-- Card 5: Unawatuna Beach -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Unawatuna Beach">
-              <span class="pill">Popular Bay</span>
+              <span class="pill">热门度假湾</span>
               <button class="heart" aria-label="Save Unawatuna Beach" data-save="Unawatuna Beach">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>15 mins from Galle</span><span class="rating">★ 4.6</span></div>
               <h3>Unawatuna Beach</h3>
-              <p>A lively crescent-shaped bay lined with oceanfront cafés, ideal for swimming and relaxed afternoons.</p>
+              <p>风平浪静的半月形黄金海湾，椰林掩映下汇聚了精致海鲜餐厅与落日休闲酒吧。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Unawatuna Beach" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Unawatuna+Beach">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Unawatuna Beach" data-type="Destination" data-icon="🏖️">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Unawatuna+Beach">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 6: Jungle Beach -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="images/jungle.jpg" alt="Jungle Beach">
-              <span class="pill">Hidden Gem</span>
+              <span class="pill">私密秘境</span>
               <button class="heart" aria-label="Save Jungle Beach" data-save="Jungle Beach">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Rumassala Cove</span><span class="rating">★ 4.4</span></div>
               <h3>Jungle Beach</h3>
-              <p>A secluded, tree-fringed cove reached via a scenic woodland path. Great for snorkeling and calm swimming.</p>
+              <p>被苍翠热带雨林环抱的隐藏世外桃源，海水清澈见底，是浮潜与静享私密时光的绝佳去处。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Jungle Beach" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jungle+Beach+Unawatuna">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Jungle Beach" data-type="Destination" data-icon="🌿">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jungle+Beach+Unawatuna">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 7: Dalawella Beach -->
           <article class="card">
             <div class="card-img">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Dalawella Beach with rope swing">
-              <span class="pill">Lagoon & Sunset</span>
-              <button class="heart" aria-label="Save Dalawella Beach" data-save="Dalawella Beach">♡</button>
+              <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Dalawella & Wijaya Beach">
+              <span class="pill">网红打卡</span>
+              <button class="heart" aria-label="Save Dalawella Beach" data-save="Dalawella & Wijaya Beach">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>20 mins from Galle</span><span class="rating">★ 4.7</span></div>
               <h3>Dalawella & Wijaya Beach</h3>
-              <p>Famous for its calm swimming lagoon, famous palm rope swing, and natural rock pools with sea turtles.</p>
+              <p>因标志性的棕榈树悬崖秋千闻名全球，天然岩石泻湖内常可近距离观赏野生海龟。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Dalawella Beach" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dalawella+Beach+Unawatuna">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Dalawella & Wijaya Beach" data-type="Destination" data-icon="🌴">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dalawella+Beach+Unawatuna">查看地图 ↗</a>
               </div>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- 3. NATURE & VIEWS CATEGORY -->
+      <!-- Category 3: Nature & Views -->
       <div class="category-block" id="nature-places">
         <div class="category-header">
-          <h3> Nature & Ocean Views</h3>
-          <p>Immerse yourself in lush rainforests, serene lakes, hilltop temples, and cliffside panoramas.</p>
+          <h3> 自然生态与全景风光</h3>
+          <p>探索宁静的山顶佛塔、红树林生态湖泊与世界自然遗产热带雨林秘境。</p>
         </div>
         <div class="cards">
+          <!-- Card 8: Japanese Peace Pagoda -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="images/japanies.jpeg" alt="Japanese Peace Pagoda">
-              <span class="pill">Panoramic View</span>
-              <button class="heart" aria-label="Save Peace Pagoda" data-save="Japanese Peace Pagoda">♡</button>
+              <span class="pill">360°制高点</span>
+              <button class="heart" aria-label="Save Japanese Peace Pagoda" data-save="Japanese Peace Pagoda">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Rumassala Hill</span><span class="rating">★ 4.7</span></div>
               <h3>Japanese Peace Pagoda</h3>
-              <p>A tranquil hilltop shrine built by Japanese monks offering 360-degree views of Galle harbor and the sea.</p>
+              <p>静谧的雪白山顶佛塔，俯瞰加勒港湾与浩瀚印度洋壮丽全景的最佳日落观赏点。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Japanese Peace Pagoda" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Japanese+Peace+Pagoda+Rumassala">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Japanese Peace Pagoda" data-type="Destination" data-icon="🕊️">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Japanese+Peace+Pagoda+Rumassala">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 9: Ramparts Sunset Walk -->
           <article class="card">
             <div class="card-img">
-              <img loading="lazy" src="images/sun.jpg" alt="Galle Ramparts Sunset">
-              <span class="pill">Golden Hour</span>
-              <button class="heart" aria-label="Save Ramparts Sunset" data-save="Galle Fort Ramparts">♡</button>
+              <img loading="lazy" src="images/sun.jpg" alt="Ramparts Sunset Walk">
+              <span class="pill">浪漫时刻</span>
+              <button class="heart" aria-label="Save Ramparts Sunset Walk" data-save="Ramparts Sunset Walk">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Flag Rock Bastion</span><span class="rating">★ 4.9</span></div>
               <h3>Ramparts Sunset Walk</h3>
-              <p>Take an evening walk along the high stone sea walls as the light shifts orange and crimson over the Indian Ocean.</p>
+              <p>傍晚时分携手漫步于巍峨的古堡石墙之上，看印度洋落日将天际染成绚丽的橘红与金黄。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Ramparts Sunset Walk" data-type="Experience" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Flag+Rock+Bastion+Galle+Fort">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Ramparts Sunset Walk" data-type="Experience" data-icon="🌅">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Flag+Rock+Bastion+Galle+Fort">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 10: Koggala Lake Boat Safari -->
           <article class="card">
             <div class="card-img">
               <img loading="lazy" src="images/safari.jpg" alt="Koggala Lake Boat Safari">
-              <span class="pill">Lake & Mangroves</span>
-              <button class="heart" aria-label="Save Koggala Lake" data-save="Koggala Lake Safari">♡</button>
+              <span class="pill">生态游船</span>
+              <button class="heart" aria-label="Save Koggala Lake Safari" data-save="Koggala Lake Boat Safari">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Koggala (25 mins)</span><span class="rating">★ 4.6</span></div>
               <h3>Koggala Lake Boat Safari</h3>
-              <p>Cruise peaceful waters, explore mangrove channels, visit Cinnamon Island, and spot rare birdlife and wildlife.</p>
+              <p>乘生态木船穿梭于原始红树林水道，探访肉桂岛，近距离观赏水鸟与丰富的湿地野生动物。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Koggala Lake Boat Safari" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Koggala+Lake+Boat+Safari">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Koggala Lake Boat Safari" data-type="Destination" data-icon="⛵">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Koggala+Lake+Boat+Safari">查看地图 ↗</a>
               </div>
             </div>
           </article>
 
+          <!-- Card 11: Sinharaja Forest Reserve -->
           <article class="card">
             <div class="card-img">
-              <img loading="lazy" src="images/forest.jpg" alt="Sinharaja Rainforest Trek">
-              <span class="pill">UNESCO Rainforest</span>
-              <button class="heart" aria-label="Save Sinharaja Forest" data-save="Sinharaja Rainforest">♡</button>
+              <img loading="lazy" src="images/forest.jpg" alt="Sinharaja Forest Reserve">
+              <span class="pill">世界自然遗产</span>
+              <button class="heart" aria-label="Save Sinharaja Forest Reserve" data-save="Sinharaja Forest Reserve">♡</button>
             </div>
             <div class="card-body">
               <div class="card-meta"><span>Day trip from Galle</span><span class="rating">★ 4.8</span></div>
               <h3>Sinharaja Forest Reserve</h3>
-              <p>Trek through Sri Lanka's premier tropical rainforest, packed with waterfalls, endemic birds, and rich biodiversity.</p>
+              <p>斯里兰卡珍贵的原始热带雨林宝库，探索隐秘瀑布、特有珍禽异兽与蔚为壮观的生物多样性。</p>
               <div class="card-foot">
-                <button class="small-btn add-trip" data-name="Sinharaja Forest Reserve" data-type="Destination" data-icon="">+ Add to trip</button>
-                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sinharaja+Forest+Reserve">Map ↗</a>
+                <button class="small-btn add-trip" data-name="Sinharaja Forest Reserve" data-type="Destination" data-icon="🌲">+ 添加到行程</button>
+                <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sinharaja+Forest+Reserve">查看地图 ↗</a>
               </div>
             </div>
           </article>
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- Stays section featuring luxury hotels and guesthouses -->
   <section class="section tint" id="stays">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="eyebrow">Rest easy</span>
-          <h2>Find your stay</h2>
+          <span class="eyebrow">精致栖居</span>
+          <h2>精选高端奢华住宿</h2>
         </div>
-        <p>Choose a heritage hideaway inside the Fort or a coastal base close to the beaches.</p>
+        <p>从古堡内充满传奇色彩的殖民地传世府邸，到悬崖海景生态度假村，尊享私密与高贵。</p>
       </div>
 
       <div class="filters" data-filter-group="hotel">
-        <a href="#AllStays" class="active">All stays</a>
-        <a href="#Boutique">Boutique</a>
-        <a href="#Luxury">Luxury</a>
-        <a href="#Coast">Coast & beach</a>
+        <a href="#AllStays" class="active">全部精选酒店</a>
+        <a href="#Boutique">古堡精品</a>
+        <a href="#Luxury">奢华度假</a>
+        <a href="#Coast">海滨秘境</a>
       </div>
 
       <div class="cards" id="hotel-cards">
-        <!-- 1. Galle Fort Hotel -->
+        <!-- Hotel 1: Galle Fort Hotel -->
         <article class="card" data-category="boutique" id="AllStays">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Boutique hotel pool">
-            <span class="pill">Boutique heritage</span>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Galle Fort Hotel">
+            <span class="pill">历史古宅精品</span>
             <button class="heart" aria-label="Save Galle Fort Hotel" data-save="Galle Fort Hotel">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>28 Church Street, Fort</span>
-              <span class="rating">★ 4.5</span>
-            </div>
+            <div class="card-meta"><span>28 Church Street, Fort</span><span class="rating">★ 4.5</span></div>
             <h3>Galle Fort Hotel</h3>
-            <p>A restored heritage mansion in the heart of the Fort, ideal for travelers who want to stay close to historic streets.</p>
-            <div class="card-price">From <strong>$350</strong> <small>/ night</small></div>
+            <p>荣获国际大奖的17世纪荷兰风格传世府邸，拥有私密庭院与泳池，尽显南洋优雅美学。</p>
+            <div class="card-price">起价 <strong>$350</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Galle Fort Hotel" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Hotel">Details ↗</a>
+              <button class="small-btn add-trip" data-name="Galle Fort Hotel" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Galle+Fort+Hotel">查看详情 ↗</a>
             </div>
           </div>
         </article>
 
+        <!-- Hotel 2: Skyline Stay Guest House -->
         <article class="card" data-category="luxury">
           <div class="card-img">
-            <img loading="lazy" src="images/sky.jpg" alt="Luxury colonial interior">
-            <span class="pill">Luxury</span>
-            <button class="heart" aria-label="Save Amangalla" data-save="Amangalla">♡</button>
+            <img loading="lazy" src="images/sky.jpg" alt="Skyline Stay Guest House">
+            <span class="pill">口碑首选</span>
+            <button class="heart" aria-label="Save Skyline Stay Guest House" data-save="Skyline Stay Guest House">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>Southern Pride, No. 27, Galle 80120</span>
-              <span class="rating">★ 4.9</span>
-            </div>
+            <div class="card-meta"><span>No. 27, Southern Pride, Galle</span><span class="rating">★ 4.9</span></div>
             <h3>Skyline Stay Guest House</h3>
-            <p>Skyline Stay Guest House is a highly-rated accommodation located on Southern Pride in Galle, Sri Lanka. It maintains a stellar 5.0-star rating based on visitor feedback, offering a welcoming stay for travelers exploring the coastal area.</p>
-            <div class="card-price">From <strong>$50</strong> <small>/ night</small></div>
+            <p>坐落于加勒优越地段的高评分温馨民宿，提供洁净舒适的现代化客房与热情周到的管家式服务。</p>
+            <div class="card-price">起价 <strong>$50</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Skyline Stay Guest House" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Skyline+Stay+Guest+House/@6.037658,80.2523278,17z/data=!4m9!3m8!1s0x3ae173ccc1466627:0x6bebfb2f2059b0d8!5m2!4m1!1i1!8m2!3d6.037658!4d80.2523278!16s%2Fg%2F11wv3wx58y?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D">Details ↗</a>
+              <button class="small-btn add-trip" data-name="Skyline Stay Guest House" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Skyline+Stay+Guest+House/@6.037658,80.2523278,17z/data=!4m9!3m8!1s0x3ae173ccc1466627:0x6bebfb2f2059b0d8!5m2!4m1!1i1!8m2!3d6.037658!4d80.2523278!16s%2Fg%2F11wv3wx58y?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D">查看详情 ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- 2. The Fort Printers -->
+        <!-- Hotel 3: The Fort Printers -->
         <article class="card" data-category="boutique">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Elegant boutique hotel room">
-            <span class="pill">Heritage boutique</span>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="The Fort Printers">
+            <span class="pill">设计感遗产酒店</span>
             <button class="heart" aria-label="Save The Fort Printers" data-save="The Fort Printers">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>39 Pedlar Street, Fort</span>
-              <span class="rating">★ 4.6</span>
-            </div>
+            <div class="card-meta"><span>39 Pedlar Street, Fort</span><span class="rating">★ 4.6</span></div>
             <h3>The Fort Printers</h3>
-            <p>A characterful heritage property with courtyard spaces, close to Fort cafés, shops and landmarks.</p>
-            <div class="card-price">From <strong>$250</strong> <small>/ night</small></div>
+            <p>由18世纪印刷厂华丽转身而成的设计感精品酒店，古朴砖木与现代轻奢完美交融。</p>
+            <div class="card-price">起价 <strong>$250</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="The Fort Printers" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Fort+Printers+Galle">Details ↗</a>
+              <button class="small-btn add-trip" data-name="The Fort Printers" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The+Fort+Printers+Galle">查看详情 ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- 3. Jetwing Lighthouse -->
+        <!-- Hotel 4: Jetwing Lighthouse -->
         <article class="card" data-category="luxury">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Oceanfront resort swimming pool">
-            <span class="pill">Oceanfront</span>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80" alt="Jetwing Lighthouse">
+            <span class="pill">大师杰作海景房</span>
             <button class="heart" aria-label="Save Jetwing Lighthouse" data-save="Jetwing Lighthouse">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>Dadella, outside central Galle</span>
-              <span class="rating">★ 4.8</span>
-            </div>
+            <div class="card-meta"><span>Dadella, Galle</span><span class="rating">★ 4.8</span></div>
             <h3>Jetwing Lighthouse</h3>
-            <p>A coastal resort known for its ocean-facing setting, a good option for a resort-style stay.</p>
-            <div class="card-price">From <strong>$220</strong> <small>/ night</small></div>
+            <p>斯里兰卡建筑大师杰弗里·巴瓦（Geoffrey Bawa）的传世海景力作，崖壁之上的奢华海滨避风港。</p>
+            <div class="card-price">起价 <strong>$220</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Jetwing Lighthouse" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.jetwinghotels.com/jetwinglighthouse/">Official site ↗</a>
+              <button class="small-btn add-trip" data-name="Jetwing Lighthouse" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.jetwinghotels.com/jetwinglighthouse/">官方网站 ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- 4. Amangalla -->
+        <!-- Hotel 5: Amangalla -->
         <article class="card" data-category="luxury">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80" alt="Luxury colonial interior">
-            <span class="pill">Ultra Luxury</span>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80" alt="Amangalla">
+            <span class="pill">顶级奢华传奇</span>
             <button class="heart" aria-label="Save Amangalla" data-save="Amangalla">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>Church Street, Galle Fort</span>
-              <span class="rating">★ 4.9</span>
-            </div>
+            <div class="card-meta"><span>Church Street, Galle Fort</span><span class="rating">★ 4.9</span></div>
             <h3>Amangalla</h3>
-            <p>Housed in historic 17th-century buildings, offering timeless colonial elegance, fine dining, and a world-class spa.</p>
-            <div class="card-price">From <strong>$1,230</strong> <small>/ night</small></div>
+            <p>安缦集团旗下传奇酒店，坐拥数百年历史殖民建筑，提供无与伦比的私密尊贵体验与顶级水疗。</p>
+            <div class="card-price">起价 <strong>$1,230</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Amangalla" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Amangalla+Galle+Fort">Details ↗</a>
+              <button class="small-btn add-trip" data-name="Amangalla" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Amangalla+Galle+Fort">查看详情 ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- 5. Fort Bazaar -->
+        <!-- Hotel 6: Fort Bazaar -->
         <article class="card" data-category="boutique">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Modern boutique courtyard">
-            <span class="pill">Design Boutique</span>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Fort Bazaar">
+            <span class="pill">现代设计美学</span>
             <button class="heart" aria-label="Save Fort Bazaar" data-save="Fort Bazaar">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>Church Street, Fort</span>
-              <span class="rating">★ 4.7</span>
-            </div>
+            <div class="card-meta"><span>Church Street, Fort</span><span class="rating">★ 4.7</span></div>
             <h3>Fort Bazaar</h3>
-            <p>A vibrant townhouse hotel featuring a blend of traditional architecture, contemporary design, and an open-air cinema lounge.</p>
-            <div class="card-price">From <strong>$280</strong> <small>/ night</small></div>
+            <p>充满摩登设计感的联排度假酒店，内设露天星空影院与地中海风情餐饮酒廊。</p>
+            <div class="card-price">起价 <strong>$280</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Fort Bazaar" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fort+Bazaar+Galle">Details ↗</a>
+              <button class="small-btn add-trip" data-name="Fort Bazaar" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fort+Bazaar+Galle">查看详情 ↗</a>
             </div>
           </div>
         </article>
 
-        <!-- 6. Tri Lanka -->
+        <!-- Hotel 7: Tri Lanka -->
         <article class="card" data-category="coast">
           <div class="card-img">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Eco resort lake view">
-            <span class="pill">Eco Sanctuary</span>
-            <button class="heart" aria-label="Save Tri Lanka" data-save="Tri Lanka">♡</button>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Tri Ahangama">
+            <span class="pill">湖畔生态秘境</span>
+            <button class="heart" aria-label="Save Tri Ahangama" data-save="Tri Ahangama">♡</button>
           </div>
           <div class="card-body">
-            <div class="card-meta">
-              <span>Koggala Lake (25 mins)</span>
-              <span class="rating">★ 4.8</span>
-            </div>
-            <h3>Tri Ahangama by Teardrop Hotels</h3>
-            <p>A stunning sustainable luxury resort on the banks of Koggala Lake, featuring circular water villas and a dramatic pool.</p>
-            <div class="card-price">From <strong>$195</strong> <small>/ night</small></div>
+            <div class="card-meta"><span>Koggala Lake (25 mins)</span><span class="rating">★ 4.8</span></div>
+            <h3>Tri Ahangama</h3>
+            <p>坐落于科加拉湖畔的先锋可持续生态奢华度假村，圆形独立水景别墅与无边泳池惊艳绝伦。</p>
+            <div class="card-price">起价 <strong>$195</strong> <small>/ 晚</small></div>
             <div class="card-foot">
-              <button class="small-btn add-trip" data-name="Tri Lanka" data-type="Hotel" data-icon="">+ Add stay</button>
-              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tri+Lanka+Koggala+Lake">Details ↗</a>
+              <button class="small-btn add-trip" data-name="Tri Ahangama" data-type="Hotel" data-icon="🏨">+ 添加住宿</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tri+Lanka+Koggala+Lake">查看详情 ↗</a>
             </div>
           </div>
         </article>
       </div>
-      <p class="notice">Accommodation rates and availability change by date and room type. Use the links to confirm current prices, facilities and booking terms.</p>
-    </div>
-  </section>
-  <section class="section" id="food">
-    <div class="wrap">
-      <div class="section-headAll restaurants"><div><span class="eyebrow">A taste of the south</span><h2>Good food, nearby</h2></div><p>Find a local meal, a relaxed café or a special dinner during your Galle visit.</p></div>
-      <div class="filters" data-filter-group="restaurant">
-         
-        <a href = #AllPlaces>All restaurants</a>
-        <a href = #Heritage>Sri Lankan</a>
-        <a href = #Beaches>Café & bistro</a>
-        <a href = #nature>Special occasion</a>
-        
-        
-      </div>
-      <div class="cards" id="restaurant-cards">
-        <article class="card" data-category="local">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Restaurant dining room"><span class="pill">Sri Lankan</span></div>
-          <div class="card-body"><div class="card-meta"><span>12 Parawa Street, Fort</span><span class="rating">★ 4.6</span></div><h3>Amma Nissa Galle Fort</h3><p>A local-food option inside the Fort for travelers looking for Sri Lankan flavors.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Amma Nissa Galle Fort" data-type="Restaurant" data-icon="🍛">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Amma+Nissa+Galle+Fort">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="cafe">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="Cozy cafe interior"><span class="pill">Café & bistro</span></div>
-          <div class="card-body"><div class="card-meta"><span>39 Pedlar Street, Fort</span><span class="rating">★ 4.6 hotel</span></div><h3>39 Bistro & Wine Bar</h3><p>A stylish dining option at The Fort Printers, with local and international-inspired dishes.</p><div class="card-foot"><button class="small-btn add-trip" data-name="39 Bistro & Wine Bar" data-type="Restaurant" data-icon="☕">+ Add to trip</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=39+Bistro+Wine+Bar+Galle">Map ↗</a></div></div>
-        </article>
-        <article class="card" data-category="fine">
-          <div class="card-img"><img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Carefully presented restaurant meal"><span class="pill">Special occasion</span></div>
-          <div class="card-body"><div class="card-meta"><span>Galle Fort area</span><span class="rating">Explore</span></div><h3>Fort dining & cafés</h3><p>Browse current restaurants around the Fort and choose based on today’s menu, budget and reviews.</p><div class="card-foot"><button class="small-btn add-trip" data-name="Dinner in Galle Fort" data-type="Restaurant" data-icon="🍽️">+ Add dinner</button><a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Galle+Fort+Sri+Lanka">Explore ↗</a></div></div>
-        </article>
-      </div>
-      <p class="notice">Restaurant details and opening hours can change. Check directly before traveling, especially on public holidays.</p>
+      <p class="notice">酒店价格与房态随季节及房型有所浮动，建议点击链接前往官方渠道核实最新预订条款。</p>
     </div>
   </section>
 
+  <!-- Dining & Food section -->
+  <section class="section" id="food">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">味蕾之旅</span>
+          <h2>南海岸特色餐饮推荐</h2>
+        </div>
+        <p>在加勒游玩期间，探索正宗斯里兰卡咖喱、精致海鲜餐厅与小资海景咖啡馆。</p>
+      </div>
+
+      <div class="filters" data-filter-group="restaurant">
+        <a href="#AllPlaces" class="active">全部餐饮</a>
+        <a href="#Heritage">地道锡兰风味</a>
+        <a href="#Beaches">网红咖啡轻食</a>
+        <a href="#nature">浪漫高端晚宴</a>
+      </div>
+
+      <div class="cards" id="restaurant-cards">
+        <!-- Restaurant 1 -->
+        <article class="card" data-category="local">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Amma Nissa Galle Fort">
+            <span class="pill">地道锡兰菜</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>12 Parawa Street, Fort</span><span class="rating">★ 4.6</span></div>
+            <h3>Amma Nissa Galle Fort</h3>
+            <p>备受游客赞誉的古堡内特色餐厅，提供地道的斯里兰卡传统香料咖喱与手抓饭体验。</p>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Amma Nissa Galle Fort" data-type="Restaurant" data-icon="🍛">+ 添加到行程</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Amma+Nissa+Galle+Fort">查看地图 ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Restaurant 2 -->
+        <article class="card" data-category="cafe">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="39 Bistro & Wine Bar">
+            <span class="pill">咖啡与餐酒馆</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>39 Pedlar Street, Fort</span><span class="rating">★ 4.6</span></div>
+            <h3>39 Bistro & Wine Bar</h3>
+            <p>位于城堡印刷厂内的时尚餐饮空间，全天候供应精品特调咖啡、地中海轻食与精选葡萄酒。</p>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="39 Bistro & Wine Bar" data-type="Restaurant" data-icon="☕">+ 添加到行程</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=39+Bistro+Wine+Bar+Galle">查看地图 ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Restaurant 3 -->
+        <article class="card" data-category="fine">
+          <div class="card-img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Dinner in Galle Fort">
+            <span class="pill">奢华浪漫晚宴</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta"><span>Galle Fort Area</span><span class="rating">★ 4.8</span></div>
+            <h3>Dinner in Galle Fort</h3>
+            <p>精选加勒古堡周边顶级海鲜餐厅，伴着印度洋海风享用新鲜捕获的龙虾与烛光晚餐。</p>
+            <div class="card-foot">
+              <button class="small-btn add-trip" data-name="Dinner in Galle Fort" data-type="Restaurant" data-icon="🍽️">+ 添加晚餐</button>
+              <a class="link-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Galle+Fort+Sri+Lanka">查看地图 ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="notice">餐厅营业时间与菜单可能随季节微调，建议出行前提前预约确认。</p>
+    </div>
+  </section>
+
+  <!-- Interactive Trip Planner Section -->
   <section class="section tint" id="planner">
     <div class="wrap">
       <div class="planner">
         <div class="planner-intro">
-          <span class="eyebrow">Your trip, your pace</span>
-          <h2>Put your Galle days together.</h2>
-          <p>Add places, a hotel and restaurants from the cards above, fill in your trip preferences, and generate a customized itinerary with an estimated total cost.</p>
-          <a href="#destinations" class="btn">Choose places ↑</a>
+          <span class="eyebrow">专属定制体验</span>
+          <h2>一站式规划您的加勒之旅。</h2>
+          <p>从上方卡片中随心添加心仪的景点、酒店与餐厅，填写您的出行偏好，即可实时生成详细的专属定制行程单与精准预算明细。</p>
+          <a href="#destinations" class="btn">去上方挑选景点 ↑</a>
         </div>
         <div class="trip-panel">
-          <h3>Your trip planner</h3>
-          <p class="trip-sub">A personal shortlist saved in this page while you use it.</p>
+          <h3>行程定制与预算估算</h3>
+          <p class="trip-sub">您的专属行程清单将在当前页面浏览器中实时保存。</p>
           
           <!-- Basic Trip Settings -->
           <div class="trip-controls">
             <div class="field">
-              <label for="start-date">Arrival date</label>
+              <label for="start-date">抵达日期</label>
               <input type="date" id="start-date">
             </div>
             <div class="field">
-              <label for="days">Length of stay (Nights)</label>
+              <label for="days">行程天数（晚数）</label>
               <select id="days">
-                <option value="1">1 day / 1 night</option>
-                <option value="2" selected>2 days / 2 nights</option>
-                <option value="3">3 days / 3 nights</option>
-                <option value="4">4 days / 4 nights</option>
-                <option value="5">5 days / 5 nights</option>
-                <option value="7">7 days / 7 nights</option>
+                <option value="1">1天 / 1晚</option>
+                <option value="2" selected>2天 / 2晚</option>
+                <option value="3">3天 / 3晚</option>
+                <option value="4">4天 / 4晚</option>
+                <option value="5">5天 / 5晚</option>
+                <option value="7">7天 / 7晚</option>
               </select>
             </div>
           </div>
@@ -517,71 +567,77 @@
           <!-- Additional Traveler Information Fields -->
           <div class="trip-controls" style="margin-top: 0;">
             <div class="field">
-              <label for="traveler-name">Traveler Name</label>
-              <input type="text" id="traveler-name" placeholder="e.g. John Doe">
+              <label for="traveler-name">游客姓名</label>
+              <input type="text" id="traveler-name" placeholder="例如：张先生 / 李女士">
             </div>
             <div class="field">
-              <label for="traveler-email">Contact Email</label>
+              <label for="traveler-email">联系邮箱 (用于接收行程)</label>
               <input type="email" id="traveler-email" placeholder="name@example.com">
             </div>
           </div>
 
           <div class="trip-controls" style="margin-top: 0;">
             <div class="field">
-              <label for="traveler-count">Number of Travelers</label>
+              <label for="traveler-count">出行人数</label>
               <input type="number" id="traveler-count" min="1" value="2">
             </div>
             <div class="field">
-              <label for="transport-type">Preferred Transport</label>
+              <label for="transport-type">首选包车交通</label>
               <select id="transport-type">
-                <option value="Private AC Car" selected>Private AC Car ($100/day)</option>
-                <option value="Luxury Van">Luxury Van ($150/day)</option>
-              
+                <option value="Private AC Car" selected>豪华私家空调轿车 ($100/天)</option>
+                <option value="Luxury Van">舒适商务车 ($150/天)</option>
               </select>
             </div>
           </div>
 
           <div class="field" style="margin-bottom: 20px;">
-            <label for="trip-notes">Special Requests / Notes</label>
-            <textarea id="trip-notes" rows="2" placeholder="Dietary needs, airport pick up, specific interests..."></textarea>
+            <label for="trip-notes">特殊需求 / 定制备注</label>
+            <textarea id="trip-notes" rows="2" placeholder="例如：中文司导、接机服务、特定餐饮忌口..."></textarea>
           </div>
 
           <!-- Shortlist Items -->
-          <label style="font-size:.78rem; font-weight:700; margin-bottom: 7px; display:block;">Selected Items</label>
+          <label style="font-size:.78rem; font-weight:700; margin-bottom: 7px; display:block;">已选择的行程项目</label>
           <div class="trip-list" id="trip-list">
-            <div class="empty">Your trip is waiting to happen. Add a destination, hotel or restaurant above.</div>
+            <div class="empty">您的行程清单目前为空，请在上方各版块点击“添加到行程”添加心仪项目。</div>
           </div>
 
           <!-- Cost Summary Card -->
           <div class="cost-summary">
-            <div class="cost-row"><span>Stays Subtotal:</span> <strong id="stay-cost">$0</strong></div>
-            <div class="cost-row"><span>Transport Subtotal:</span> <strong id="transport-cost">$0</strong></div>
-            <div class="cost-row"><span>Activities & Food Est:</span> <strong id="items-cost">$0</strong></div>
+            <div class="cost-row"><span>住宿总计：</span> <strong id="stay-cost">$0</strong></div>
+            <div class="cost-row"><span>交通包车小计：</span> <strong id="transport-cost">$0</strong></div>
+            <div class="cost-row"><span>门票与餐饮预估：</span> <strong id="items-cost">$0</strong></div>
             <hr class="cost-divider">
-            <div class="cost-row total"><span>Estimated Total:</span> <strong id="total-cost">$0</strong></div>
+            <div class="cost-row total"><span>预估参考总费用：</span> <strong id="total-cost">$0</strong></div>
           </div>
 
           <!-- Actions -->
           <div style="display:flex;gap:10px;flex-wrap:wrap; margin-top: 20px;">
-            <button class="btn" id="make-plan">Create itinerary</button>
-            <button class="btn secondary" id="clear-plan">Clear selections</button>
+            <button class="btn" id="make-plan">一键生成定制行程单</button>
+            <button class="btn secondary" id="clear-plan">清空当前选择</button>
           </div>
 
           <div class="plan-output" id="plan-output" aria-live="polite"></div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-            <button class="small-btn" id="copy-plan" hidden>Copy itinerary</button>
-            <button class="small-btn" id="download-plan" hidden>Download .txt</button>
+            <button class="small-btn" id="copy-plan" hidden>复制定制行程单</button>
+            <button class="small-btn" id="download-plan" hidden>下载 .txt 行程文件</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+</main>
 
-  
+<!-- Footer section -->
+<footer>
+  <div class="wrap footer-row">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>探索<span style="color:#f2a37c">斯里兰卡</span></span></a>
+    <p><a href="#destinations">返回顶部重新探索 ↑</a></p>
+  </div>
+</footer>
 
-<footer><div class="wrap footer-row"><a class="brand" href="#"><span class="brand-mark">✦</span><span>explore<span style="color:#f2a37c">Sri lanka</span></span></a><p><a href="#destinations">Explore again ↑</a></p></div></footer>
 <div class="toast" id="toast" role="status"></div>
 
+<!-- JavaScript logic handler -->
 <script src="script.js" defer></script>
 </body>
 </html>
