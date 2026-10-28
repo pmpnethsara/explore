@@ -513,6 +513,57 @@ footer{
     font-size: 0.8rem;
     color: var(--muted);
 }
+/* Additional Trip Planner Form Fields & Textarea */
+.field textarea {
+    width: 100%;
+    border: 1px solid #d9e0d8;
+    border-radius: 11px;
+    padding: 11px 12px;
+    background: #fffdf8;
+    color: var(--ink);
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Cost Summary Container */
+.cost-summary {
+    background: var(--sand);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 18px;
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.cost-row strong {
+    color: var(--ink);
+}
+
+.cost-row.total {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 0;
+}
+
+.cost-row.total strong {
+    color: var(--green);
+    font-size: 1.35rem;
+}
+
+.cost-divider {
+    border: 0;
+    border-top: 1px dashed #cbd7cc;
+    margin: 10px 0;
+}
 @media(max-width:850px){
     nav{gap:14px}nav a:not(.nav-cta){display:none}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-photo{min-height:350px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.planner{grid-template-columns:1fr}.planner-intro{position:static}.section{padding:56px 0}
 }
